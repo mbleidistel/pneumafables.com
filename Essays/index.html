@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="author" content="Flux User">
+    <meta name="description" content="My Website">
+    <meta name="keywords" content="Flux, Mac">
+    <title>Fabfables - Tales for a gamey era!</title>
+    <link href="main.css" rel="stylesheet" media="screen" type="text/css">
+    <link href="../main.css" rel="stylesheet" media="screen" type="text/css">
+    <script src="../JS/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="../JS/TableCreator.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//www.pneumafables.com/Apps/Piwik/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 1]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><p><img src="//www.pneumafables.com/Apps/Piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+</head>
+<body bgcolor="black">
+    <center>
+        <img class="TopNBottom" src="../Images/Top.png">
+    </center>
+
+    <center>
+        <span style="color: #996633;font-family: Arial;font-size: 31px;position: relative;top: -69px;">The Who-licious Essays</span>
+    </center>
+
+	<center>
+		<img src="Essay Warning.png" width="250px">
+	</center>
+
+    <center>
+        <div class="EssayTableDiv">
+            <table id="Essays" width="80%" cellspacing="0"></table>
+        </div>
+    </center>
+
+    <center>
+        <img class="TopNBottom" src="../Images/Bottom.png">
+    </center>
+</body>
+<script>
+    $(document).ready( function()
+    {
+        Init();
+    });
+</script>
+</html>

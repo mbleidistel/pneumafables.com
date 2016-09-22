@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="author" content="Flux User">
+    <meta name="description" content="My Website">
+    <meta name="keywords" content="Flux, Mac">
+    <title>Fabfables - Tales for Escape Artists</title>
+    <link href="main.css" rel="stylesheet" media="screen" type="text/css">
+    <script src="JS/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="JS/TableCreator.js" type="text/javascript"></script>
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//www.pneumafables.com/Apps/Piwik/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 1]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><p><img src="//www.pneumafables.com/Apps/Piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+</head>
+<body bgcolor="black">
+    <center>
+        <img class="TopNBottom" src="Images/Top.png">
+    </center>
+    <div id="SiteCreditsBox">
+        <a onclick="showSiteCredits()"><img width="200px" height="auto" src="Images/SiteCreditsBox.png"></a>
+    </div>
+    <script>
+        function showSiteCredits()
+        {
+            $("#SiteCredits").fadeIn();
+            setTimeout(function()
+            {
+                $('#SiteCredits').fadeOut();
+            }, 10000)
+        }
+    </script>
+    <div id="SiteCredits" class="center" style="display: none">
+        <center>
+            <img class="shadow" height="auto" width="60%" src="Images/CreditPageLarge.png">
+        </center>
+    </div>
+
+    <center>
+        <table id="Books" width="100%" cellspacing="0"></table>
+    </center>
+
+    <center>
+        <div id="BookPreview" class='' style="display: none;">
+            <!--<a id='ClosePreviewButton' class='button-link' onclick="ClosePreview()">Close</a>-->
+            <div id="PDFText">
+            </div>
+            <div id="PreviewReturnLinks">
+                Download PDF Version <a id="PDFLink" target="_blank" href="#">HERE</a><br>
+                <span id='iBookStoreLine'>Download from iBook Store <a id="iBookLink" target="_blank" href="#">HERE</a><br></span>
+                Return to Pneumfables <a onclick="ClosePreview()" href="#">HERE</a>
+            </div>
+        </div>
+    </center>
+    <center>
+        <img class="TopNBottom" src="Images/Bottom.png">
+    </center>
+</body>
+<script>
+    var Info =
+    "<span style='padding:5px;font-family:arial;font-size:7pt;color:white;'>" +
+        "WEBPAGE:<br>" +
+        "<a style='text-decoration: none; color: beige' href='mailto:mcs_service@shaw.ca'>Michael Bleidistel</a><br>" +
+		"<br>" +
+		"IMAGE SOURCES:<br>" +
+        "Acta Photographica<br>" +
+		"Levente Adam (Egypt)<br>" +
+		"Thomas Hope<br>" +
+		"<br>" +
+		"STORIES and<br>" +
+		"COMPOSITE ILLUSTRATIONS<br>" +
+		"Willard Thurston<br>" +		
+    "</span>";
+
+    var Links =
+    [
+        {book:"NefertitisGown", link:"https://itunes.apple.com/ca/book/nefertitis-gown/id944006211?mt=11"},
+        {book:"ChildrenOfTheAten", link:"https://itunes.apple.com/ca/book/children-of-the-aten/id945580069?mt=11"},
+        {book:"WhatMadeThee", link:"https://itunes.apple.com/ca/book/what-made-thee/id947463461?mt=11"},
+        {book:"BullDance", link:"https://itunes.apple.com/ca/book/bull-dance/id947701646?mt=11"},
+
+        {book:"Apsara", link:"https://itunes.apple.com/ca/book/apsara/id949668104?mt=11"},
+        {book:"Dyad", link:"https://itunes.apple.com/ca/book/dyad/id945575561?mt=11"},
+        {book:"NefertitisGown", link:"https://itunes.apple.com/ca/book/nefertitis-gown/id944006211?mt=11"},
+        {book:"Anastasia", link:"https://itunes.apple.com/ca/book/anastasia/id945579474?mt=11"},
+		{book:"UnbiddenGuests", link:"https://itunes.apple.com/ca/book/book-title/id1067967726?mt=13"},
+
+        {book:"MusingTheMaenad", link:"https://itunes.apple.com/ca/book/musing-the-maenad/id949575751?mt=11"},
+        {book:"Pneuma", link:"https://itunes.apple.com/ca/book/pneuma/id945583091?mt=11"},
+        {book:"CherryBomb", link:"https://itunes.apple.com/ca/book/cherry-bomb/id943992634?mt=11"},
+        {book:"Essays", link:"Essays"}
+    ];
+
+    var TableLayout =
+    [
+        'leftspacer',
+        'header:Graphic Novels',
+        'noline',
+        'header:Novels',
+        'empty',
+        'empty',
+        'rightspacer',
+
+        'leftspacer',
+        'NefertitisGown',
+        'line',
+        'ChildrenOfTheAten',
+        'WhatMadeThee',
+        'BullDance',
+        'rightspacer',
+
+        'leftspacer',
+        'Apsara',
+        'line',
+        'Dyad',
+        'Anastasia', //'blank:<h2>Anastasia<br>Coming soon</h2>',
+        'UnbiddenGuests',//'blank:<h2>Birth Marks<br><br>Coming in<br>May 2015!</h2>',
+        'rightspacer',
+
+        'leftspacer',
+        'MusingTheMaenad',
+        'line',
+        'Pneuma',//'blank:<h2>Pneuma<br>Coming soon</h2>',
+        'CherryBomb',
+        'Essays',//'nomagnification_nolink:InfoFrame',
+        'rightspacer'
+    ];
+
+    $(document).ready( function()
+    {
+        TableLayoutParser(TableLayout, "Books");
+    });
+</script>
+</html>

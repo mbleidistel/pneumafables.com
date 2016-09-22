@@ -1,0 +1,44 @@
+.container
+{
+    width: 100px; //whatever width you want
+}
+
+.image
+{
+    text-align: center;
+    width: 100%; //fill up whole div
+}
+
+.text
+{
+    text-align: center;
+    color: #996633;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+.EssayTableDiv
+{
+    height: 800px;
+    overflow: auto;
+}
+
+p.text:hover
+{
+    color: red;
+}
+
+a.text:hover
+{
+    color: red;
+}
+
+.EssayCol
+{
+
+}
+
+.EssayRow
+{
+
+}

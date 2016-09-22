@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body bgcolor="grey">
+    <center>
+        <div id='Link' style="position:absolute;top:30%;left:30%">
+            <center>
+            Intrigued????<br>
+            <br>
+            Download and read this or other stories by Willard Thurston <a style='text-decoration:none;' target='_blank' href="https://itunes.apple.com/ca/artist/willard-thurston/id943992715?mt=11">on your iPad</a>!<br>
+			Amazon Kindle support coming soon!
+            </center>
+        </div>
+    </center>
+	<script>
+		$(window).scroll(function()
+		{
+			$("#Link")
+              .animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "slow" );
+		});
+	</script>
+</body>
+</html>
